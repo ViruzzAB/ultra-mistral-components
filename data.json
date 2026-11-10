@@ -1,0 +1,136 @@
+{
+  "updatedAt": "2026-11-10T14:34:45.619Z",
+  "gragams": {
+    "runs": [],
+    "totalKm": 0,
+    "totalDplus": 0
+  },
+  "alex": {
+    "runs": [
+      {
+        "title": "Vini Vici en DNF",
+        "runner": "ALEX (#02)",
+        "distance": "19,0 km",
+        "dplus": "517 m",
+        "pace": "8:26 /km",
+        "hr": "158 bpm",
+        "date": "07/11/2026",
+        "url": "https://www.strava.com/activities/20894922129"
+      },
+      {
+        "title": "Course à pied le matin",
+        "runner": "ALEX (#02)",
+        "distance": "11,1 km",
+        "dplus": "260 m",
+        "pace": "6:28 /km",
+        "hr": "158 bpm",
+        "date": "01/11/2026",
+        "url": "https://www.strava.com/activities/20813291463"
+      },
+      {
+        "title": "Course à pied en soirée",
+        "runner": "ALEX (#02)",
+        "distance": "5,0 km",
+        "dplus": "21 m",
+        "pace": "5:38 /km",
+        "hr": "159 bpm",
+        "date": "30/10/2026",
+        "url": "https://www.strava.com/activities/20794129711"
+      },
+      {
+        "title": "Course à pied en soirée d’anniversaire",
+        "runner": "ALEX (#02)",
+        "distance": "4,3 km",
+        "dplus": "27 m",
+        "pace": "6:17 /km",
+        "hr": "158 bpm",
+        "date": "28/10/2026",
+        "url": "https://www.strava.com/activities/20769002914"
+      },
+      {
+        "title": "MK6",
+        "runner": "ALEX (#02)",
+        "distance": "20,3 km",
+        "dplus": "375 m",
+        "pace": "6:40 /km",
+        "hr": "178 bpm",
+        "date": "25/10/2026",
+        "url": "https://www.strava.com/activities/20724911312"
+      },
+      {
+        "title": "Sortie de retour de vacances",
+        "runner": "ALEX (#02)",
+        "distance": "5,1 km",
+        "dplus": "16 m",
+        "pace": "6:54 /km",
+        "hr": "144 bpm",
+        "date": "21/10/2026",
+        "url": "https://www.strava.com/activities/20676508106"
+      }
+    ],
+    "totalKm": 65,
+    "totalDplus": 1216
+  },
+  "recentRuns": [
+    {
+      "title": "Vini Vici en DNF",
+      "runner": "ALEX (#02)",
+      "distance": "19,0 km",
+      "dplus": "517 m",
+      "pace": "8:26 /km",
+      "hr": "158 bpm",
+      "date": "07/11/2026",
+      "url": "https://www.strava.com/activities/20894922129"
+    },
+    {
+      "title": "Course à pied le matin",
+      "runner": "ALEX (#02)",
+      "distance": "11,1 km",
+      "dplus": "260 m",
+      "pace": "6:28 /km",
+      "hr": "158 bpm",
+      "date": "01/11/2026",
+      "url": "https://www.strava.com/activities/20813291463"
+    },
+    {
+      "title": "Course à pied en soirée",
+      "runner": "ALEX (#02)",
+      "distance": "5,0 km",
+      "dplus": "21 m",
+      "pace": "5:38 /km",
+      "hr": "159 bpm",
+      "date": "30/10/2026",
+      "url": "https://www.strava.com/activities/20794129711"
+    },
+    {
+      "title": "Course à pied en soirée d’anniversaire",
+      "runner": "ALEX (#02)",
+      "distance": "4,3 km",
+      "dplus": "27 m",
+      "pace": "6:17 /km",
+      "hr": "158 bpm",
+      "date": "28/10/2026",
+      "url": "https://www.strava.com/activities/20769002914"
+    },
+    {
+      "title": "MK6",
+      "runner": "ALEX (#02)",
+      "distance": "20,3 km",
+      "dplus": "375 m",
+      "pace": "6:40 /km",
+      "hr": "178 bpm",
+      "date": "25/10/2026",
+      "url": "https://www.strava.com/activities/20724911312"
+    },
+    {
+      "title": "Sortie de retour de vacances",
+      "runner": "ALEX (#02)",
+      "distance": "5,1 km",
+      "dplus": "16 m",
+      "pace": "6:54 /km",
+      "hr": "144 bpm",
+      "date": "21/10/2026",
+      "url": "https://www.strava.com/activities/20676508106"
+    }
+  ]
+}
