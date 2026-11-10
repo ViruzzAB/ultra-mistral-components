@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Ultra Mistral</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mistralCobalt: '#0F3D8A',
+                        mistralDeep: '#0A2246',
+                        mistralRoyal: '#1E40AF',
+                        mistralYellow: '#FACC15',
+                        mistralGold: '#F59E0B',
+                        stravaOrange: '#FC4C02'
+                    },
+                    fontFamily: {
+                        logo: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-refined { font-family: 'Cinzel', serif; letter-spacing: 0.14em; font-weight: 900; }
+        body { margin: 0; padding: 0; background: transparent; overflow-x: hidden; }
+    </style>
+</head>
+<body class="bg-transparent font-sans antialiased">
+    <header class="w-full bg-white/95 backdrop-blur-xl border-b-2 border-mistralCobalt/15 shadow-sm py-2.5 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-2">
+            
+            <!-- Ligne 1 : Logo & Badges -->
+            <div class="w-full flex items-center justify-between lg:justify-center relative">
+                <!-- Badge Duo Gauche -->
+                <div class="hidden lg:flex items-center gap-2 absolute left-0 text-[11px] font-mono font-bold text-mistralDeep bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+                    <span class="w-2 h-2 rounded-full bg-mistralCobalt"></span>
+                    <span>BLASON : GRAGAMs & ALEX</span>
+                </div>
+
+                <!-- Logo Central : Redirige vers la page d'accueil de ton Google Site -->
+                <a href="https://sites.google.com/view/TON-SITE/accueil" target="_parent" class="flex flex-col items-center group focus:outline-none">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-6 h-1 bg-mistralYellow rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>
+                        <span class="text-xl sm:text-2xl md:text-3xl logo-refined tracking-[0.16em] text-mistralCobalt">
+                            ULTRA <span class="text-mistralDeep bg-mistralYellow px-2 py-0.5 rounded-md shadow-sm">MISTRAL</span>
+                        </span>
+                        <span class="w-6 h-1 bg-mistralCobalt rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>
+                    </div>
+                </a>
+
+                <!-- Statut Live Droite -->
+                <div class="hidden lg:flex items-center gap-2 absolute right-0">
+                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Live
+                    </span>
+                </div>
+            </div>
+
+            <!-- Ligne 2 : Liens de navigation avec target="_parent" -->
+            <!-- IMPORTANT : Remplace les href ci-dessous par les URL réelles de tes pages Google Sites -->
+            <nav class="flex flex-wrap justify-center items-center bg-slate-100/95 p-1 rounded-full border border-slate-200/90 shadow-inner gap-1">
+                <a href="https://sites.google.com/view/TON-SITE/aventure" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <i data-lucide="compass" class="w-3.5 h-3.5"></i> L'Aventure & Défis
+                </a>
+                
+                <a href="https://sites.google.com/view/TON-SITE/telemetrie" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition">
+                    <span class="w-2 h-2 rounded-full bg-stravaOrange animate-ping"></span> Télémétrie & Courbes
+                </a>
+
+                <a href="https://sites.google.com/view/TON-SITE/le-lab" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <i data-lucide="microscope" class="w-3.5 h-3.5"></i> Le Lab & Débunk
+                </a>
+
+                <a href="https://sites.google.com/view/TON-SITE/radar-courses" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <i data-lucide="mountain-snow" class="w-3.5 h-3.5"></i> Radar UTMB & Courses
+                </a>
+
+                <a href="https://sites.google.com/view/TON-SITE/shop" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shop Asso
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
