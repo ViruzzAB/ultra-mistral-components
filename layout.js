@@ -1,18 +1,21 @@
 (function () {
     const BASE_URL = "https://sites.google.com/view/ultra-mistral";
 
-    // 1. Injection du Header
+    // 1. Injection du Header dynamique
     const headerEl = document.getElementById('dynamic-header');
     if (headerEl) {
         headerEl.innerHTML = 
-            '<header class="sticky top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b-2 border-mistralCobalt/15 shadow-sm py-2.5 px-4 sm:px-6">' +
-                '<div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-2">' +
+            '<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/92 backdrop-blur-xl border-b-2 border-mistralCobalt/15 shadow-sm transition-all duration-300">' +
+                '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col items-center justify-center gap-2">' +
+                    
+                    '<!-- LIGNE 1 : LOGO ET BADGES -->' +
                     '<div class="w-full flex items-center justify-between lg:justify-center relative">' +
                         '<div class="hidden lg:flex items-center gap-2 absolute left-0 text-[11px] font-mono font-bold text-mistralDeep bg-slate-100 px-3 py-1 rounded-full border border-slate-200">' +
                             '<span class="w-2 h-2 rounded-full bg-mistralCobalt"></span>' +
                             '<span>BLASON : GRAGAMs & ALEX</span>' +
                         '</div>' +
-                        '<!-- CLIC SUR LE LOGO : RETOUR ACCUEIL -->' +
+
+                        '<!-- CLIC SUR LE LOGO : RETOUR ACCUEIL DU SITE -->' +
                         '<a href="' + BASE_URL + '/accueil" target="_parent" class="flex flex-col items-center group focus:outline-none">' +
                             '<div class="flex items-center gap-2.5">' +
                                 '<span class="w-6 h-1 bg-mistralYellow rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>' +
@@ -22,58 +25,53 @@
                                 '<span class="w-6 h-1 bg-mistralCobalt rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>' +
                             '</div>' +
                         '</a>' +
+
                         '<div class="hidden lg:flex items-center gap-2 absolute right-0">' +
-                            '<span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold flex items-center gap-1.5">' +
+                            '<span id="cloud-sync-pill" class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold flex items-center gap-1.5">' +
                                 '<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>' +
-                                'Live' +
+                                'Cloud Live' +
                             '</span>' +
+                            '<button onclick="if(window.openFoundersAccess) window.openFoundersAccess()" aria-label="Console" class="p-2 rounded-full bg-slate-100 hover:bg-mistralDeep text-slate-500 hover:text-mistralYellow transition border border-slate-200">' +
+                                '<i data-lucide="lock" class="w-3.5 h-3.5"></i>' +
+                            '</button>' +
                         '</div>' +
+
+                        '<button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-mistralDeep hover:bg-slate-100 focus:outline-none" aria-label="Menu">' +
+                            '<i data-lucide="menu" class="w-6 h-6"></i>' +
+                        '</button>' +
                     '</div>' +
-                    '<nav class="flex flex-wrap justify-center items-center bg-slate-100/95 p-1 rounded-full border border-slate-200/90 shadow-inner gap-1">' +
-                        '<a href="' + BASE_URL + '/accueil" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
+
+                    '<!-- LIGNE 2 : NAVIGATION PILL DOCK -->' +
+                    '<nav class="hidden lg:flex items-center bg-slate-100/95 p-1 rounded-full border border-slate-200/90 shadow-inner space-x-1" id="desktop-pill-nav">' +
+                        '<a href="' + BASE_URL + '/accueil" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
                             '<i data-lucide="compass" class="w-3.5 h-3.5"></i> L\'Aventure & Défis' +
                         '</a>' +
-                        '<!-- CLIC TÉLÉMÉTRIE : LIEN DIRECT VERS LA PAGE TÉLÉMÉTRIE -->' +
-                        '<a href="' + BASE_URL + '/telemetrie" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition">' +
+                        '<!-- LIEN VERS LA PAGE TELEMETRIE DÉDIÉE -->' +
+                        '<a href="' + BASE_URL + '/telemetrie" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition">' +
                             '<span class="w-2 h-2 rounded-full bg-stravaOrange animate-ping"></span> Télémétrie & Courbes' +
                         '</a>' +
-                        '<a href="' + BASE_URL + '/accueil#lab" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
+                        '<a href="' + BASE_URL + '/accueil#lab" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
                             '<i data-lucide="microscope" class="w-3.5 h-3.5"></i> Le Lab & Débunk' +
                         '</a>' +
-                        '<a href="' + BASE_URL + '/accueil#calendrier" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
+                        '<a href="' + BASE_URL + '/accueil#calendrier" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
                             '<i data-lucide="mountain-snow" class="w-3.5 h-3.5"></i> Radar UTMB & Courses' +
                         '</a>' +
-                        '<a href="' + BASE_URL + '/accueil#vestiaire" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
+                        '<a href="' + BASE_URL + '/accueil#vestiaire" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
                             '<i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shop Asso' +
                         '</a>' +
                     '</nav>' +
                 '</div>' +
-            '</header>';
-    }
 
-    // 2. Injection du Footer
-    const footerEl = document.getElementById('dynamic-footer');
-    if (footerEl) {
-        footerEl.innerHTML = 
-            '<footer class="w-full bg-mistralDeep text-white py-10 px-4 sm:px-6 lg:px-8 border-t-4 border-mistralYellow mt-12">' +
-                '<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">' +
-                    '<div class="text-center md:text-left space-y-1.5">' +
-                        '<span class="text-2xl logo-refined text-white block">' +
-                            'ULTRA <span class="text-mistralYellow">MISTRAL</span>' +
-                        '</span>' +
-                        '<p class="text-xs text-slate-300 italic font-serif">' +
-                            '« L\'art de la patience, la rigueur du réel, l\'appel des cimes. » • <strong>GRAGAMs & ALEX</strong>' +
-                        '</p>' +
-                    '</div>' +
-                    '<div class="flex flex-col items-center md:items-end space-y-1 text-xs text-slate-400 font-mono">' +
-                        '<span class="text-mistralYellow">Marseille-Cassis (47e) → Veni Vici (33K) → UTMB 100M & Diagonale</span>' +
-                        '<span>© 2026 Association ULTRA MISTRAL</span>' +
-                    '</div>' +
+                '<!-- MENU MOBILE DEROULE -->' +
+                '<div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-4 space-y-2.5 text-xs font-extrabold uppercase tracking-wider text-mistralDeep">' +
+                    '<a href="' + BASE_URL + '/accueil" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="compass" class="w-4 h-4 text-mistralCobalt"></i> L\'Aventure & Défis</a>' +
+                    '<a href="' + BASE_URL + '/telemetrie" target="_parent" class="w-full text-left flex items-center gap-2 py-2 text-stravaOrange"><i data-lucide="activity" class="w-4 h-4"></i> Télémétrie & Courbes</a>' +
+                    '<a href="' + BASE_URL + '/accueil#lab" target="_parent" class="w-full text-left flex items-center gap-2 py-2 text-mistralCobalt"><i data-lucide="microscope" class="w-4 h-4"></i> Le Lab & Débunk</a>' +
+                    '<a href="' + BASE_URL + '/accueil#calendrier" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="mountain-snow" class="w-4 h-4 text-mistralCobalt"></i> Radar UTMB</a>' +
+                    '<a href="' + BASE_URL + '/accueil#vestiaire" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="shopping-bag" class="w-4 h-4 text-mistralCobalt"></i> Shop Asso</a>' +
                 '</div>' +
-            '</footer>';
-    }
+            '</header>';
 
-    if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        window.lucide.createIcons();
-    }
-})();
+        // Gestion du menu mobile
+        setTimeout(function() {
+            const
