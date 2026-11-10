@@ -1,0 +1,36 @@
+name: Strava Auto Sync
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Configuration Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Extraction Strava
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN_GRAGAMS: ${{ secrets.STRAVA_REFRESH_TOKEN_GRAGAMS }}
+          STRAVA_REFRESH_TOKEN_ALEX: ${{ secrets.STRAVA_REFRESH_TOKEN_ALEX }}
+        run: node scripts/sync.js
+
+      - name: Déploiement automatique
+        run: |
+          git config --global user.name "GitHub Action Strava"
+          git config --global user.email "action@github.com"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Strava telemetry [skip ci]" && git push)
