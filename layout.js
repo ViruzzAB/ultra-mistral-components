@@ -1,6 +1,16 @@
 function initUltraMistralLayout() {
     const BASE_URL = "https://sites.google.com/view/ultra-mistral";
 
+    // Fonction globale pour forcer la navigation au sommet du navigateur
+    window.goToPage = function(path) {
+        try {
+            window.top.location.href = BASE_URL + path;
+        } catch (e) {
+            // Secours si window.top est bloqué
+            window.parent.location.href = BASE_URL + path;
+        }
+    };
+
     // 1. Injection du Header
     const headerEl = document.getElementById('dynamic-header');
     if (headerEl) {
@@ -13,7 +23,8 @@ function initUltraMistralLayout() {
                         <span>BLASON : GRAGAMs & ALEX</span>
                     </div>
 
-                    <a href="${BASE_URL}/accueil" target="_parent" class="flex flex-col items-center group focus:outline-none">
+                    <!-- CLIC LOGO FORCE VIA JAVASCRIPT -->
+                    <a href="${BASE_URL}/accueil" onclick="event.preventDefault(); goToPage('/accueil');" class="flex flex-col items-center group focus:outline-none cursor-pointer">
                         <div class="flex items-center gap-2.5">
                             <span class="w-6 h-1 bg-mistralYellow rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>
                             <span class="text-xl sm:text-2xl md:text-3xl logo-refined tracking-[0.16em] text-mistralCobalt">
@@ -36,30 +47,30 @@ function initUltraMistralLayout() {
                 </div>
 
                 <nav class="hidden lg:flex items-center bg-slate-100/95 p-1 rounded-full border border-slate-200/90 shadow-inner space-x-1" id="desktop-pill-nav">
-                    <a href="${BASE_URL}/accueil" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <a href="${BASE_URL}/accueil" onclick="event.preventDefault(); goToPage('/accueil');" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition cursor-pointer">
                         <i data-lucide="compass" class="w-3.5 h-3.5"></i> L'Aventure & Défis
                     </a>
-                    <a href="${BASE_URL}/telemetrie" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition">
+                    <a href="${BASE_URL}/telemetrie" onclick="event.preventDefault(); goToPage('/telemetrie');" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition cursor-pointer">
                         <span class="w-2 h-2 rounded-full bg-stravaOrange animate-ping"></span> Télémétrie & Courbes
                     </a>
-                    <a href="${BASE_URL}/accueil#lab" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <a href="${BASE_URL}/accueil#lab" onclick="event.preventDefault(); goToPage('/accueil#lab');" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition cursor-pointer">
                         <i data-lucide="microscope" class="w-3.5 h-3.5"></i> Le Lab & Débunk
                     </a>
-                    <a href="${BASE_URL}/accueil#calendrier" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <a href="${BASE_URL}/accueil#calendrier" onclick="event.preventDefault(); goToPage('/accueil#calendrier');" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition cursor-pointer">
                         <i data-lucide="mountain-snow" class="w-3.5 h-3.5"></i> Radar UTMB & Courses
                     </a>
-                    <a href="${BASE_URL}/accueil#vestiaire" target="_parent" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">
+                    <a href="${BASE_URL}/accueil#vestiaire" onclick="event.preventDefault(); goToPage('/accueil#vestiaire');" class="nav-pill-item px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition cursor-pointer">
                         <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Shop Asso
                     </a>
                 </nav>
             </div>
 
             <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-4 space-y-2.5 text-xs font-extrabold uppercase tracking-wider text-mistralDeep">
-                <a href="${BASE_URL}/accueil" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="compass" class="w-4 h-4 text-mistralCobalt"></i> L'Aventure & Défis</a>
-                <a href="${BASE_URL}/telemetrie" target="_parent" class="w-full text-left flex items-center gap-2 py-2 text-stravaOrange"><i data-lucide="activity" class="w-4 h-4"></i> Télémétrie & Courbes</a>
-                <a href="${BASE_URL}/accueil#lab" target="_parent" class="w-full text-left flex items-center gap-2 py-2 text-mistralCobalt"><i data-lucide="microscope" class="w-4 h-4"></i> Le Lab & Débunk</a>
-                <a href="${BASE_URL}/accueil#calendrier" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="mountain-snow" class="w-4 h-4 text-mistralCobalt"></i> Radar UTMB</a>
-                <a href="${BASE_URL}/accueil#vestiaire" target="_parent" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt"><i data-lucide="shopping-bag" class="w-4 h-4 text-mistralCobalt"></i> Shop Asso</a>
+                <a href="${BASE_URL}/accueil" onclick="event.preventDefault(); goToPage('/accueil');" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt cursor-pointer"><i data-lucide="compass" class="w-4 h-4 text-mistralCobalt"></i> L'Aventure & Défis</a>
+                <a href="${BASE_URL}/telemetrie" onclick="event.preventDefault(); goToPage('/telemetrie');" class="w-full text-left flex items-center gap-2 py-2 text-stravaOrange cursor-pointer"><i data-lucide="activity" class="w-4 h-4"></i> Télémétrie & Courbes</a>
+                <a href="${BASE_URL}/accueil#lab" onclick="event.preventDefault(); goToPage('/accueil#lab');" class="w-full text-left flex items-center gap-2 py-2 text-mistralCobalt cursor-pointer"><i data-lucide="microscope" class="w-4 h-4"></i> Le Lab & Débunk</a>
+                <a href="${BASE_URL}/accueil#calendrier" onclick="event.preventDefault(); goToPage('/accueil#calendrier');" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt cursor-pointer"><i data-lucide="mountain-snow" class="w-4 h-4 text-mistralCobalt"></i> Radar UTMB</a>
+                <a href="${BASE_URL}/accueil#vestiaire" onclick="event.preventDefault(); goToPage('/accueil#vestiaire');" class="w-full text-left flex items-center gap-2 py-2 hover:text-mistralCobalt cursor-pointer"><i data-lucide="shopping-bag" class="w-4 h-4 text-mistralCobalt"></i> Shop Asso</a>
             </div>
         </header>
         `;
@@ -99,7 +110,6 @@ function initUltraMistralLayout() {
     }
 }
 
-// Exécution directe et sécurisée
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initUltraMistralLayout);
 } else {
