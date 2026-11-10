@@ -10,7 +10,8 @@
                             '<span class="w-2 h-2 rounded-full bg-mistralCobalt"></span>' +
                             '<span>BLASON : GRAGAMs & ALEX</span>' +
                         '</div>' +
-                        '<a href="#" target="_parent" class="flex flex-col items-center group focus:outline-none">' +
+                        '<!-- CLIC SUR LE LOGO : RETOUR ACCUEIL DU SITE -->' +
+                        '<a href="/" target="_parent" class="flex flex-col items-center group focus:outline-none">' +
                             '<div class="flex items-center gap-2.5">' +
                                 '<span class="w-6 h-1 bg-mistralYellow rounded-full hidden sm:inline-block transition-all group-hover:w-10"></span>' +
                                 '<span class="text-xl sm:text-2xl md:text-3xl logo-refined tracking-[0.16em] text-mistralCobalt">' +
@@ -27,9 +28,10 @@
                         '</div>' +
                     '</div>' +
                     '<nav class="flex flex-wrap justify-center items-center bg-slate-100/95 p-1 rounded-full border border-slate-200/90 shadow-inner gap-1">' +
-                        '<a href="/aventure" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
+                        '<a href="/" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-mistralCobalt transition">' +
                             '<i data-lucide="compass" class="w-3.5 h-3.5"></i> L\'Aventure & Défis' +
                         '</a>' +
+                        '<!-- LIEN VERS LA PAGE TELEMETRIE VALIDÉE -->' +
                         '<a href="/telemetrie" target="_parent" class="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5 text-mistralDeep hover:text-stravaOrange transition">' +
                             '<span class="w-2 h-2 rounded-full bg-stravaOrange animate-ping"></span> Télémétrie & Courbes' +
                         '</a>' +
@@ -69,7 +71,6 @@
             '</footer>';
     }
 
-    // 3. Rendu des icônes Lucide après injection
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
     }
