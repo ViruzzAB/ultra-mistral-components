@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T14:58:10.309Z",
+  "updatedAt": "2026-11-16T23:59:24.288Z",
   "gragams": {
     "runs": [],
     "totalKm": 0,
@@ -7,6 +7,16 @@
   },
   "alex": {
     "runs": [
+      {
+        "title": "On met le genou en tension tout doucement",
+        "runner": "ALEX (#02)",
+        "distance": "1,2 km",
+        "dplus": "2 m",
+        "pace": "6:47 /km",
+        "hr": "120 bpm",
+        "date": "16/11/2026",
+        "url": "https://www.strava.com/activities/21011750443"
+      },
       {
         "title": "Vini Vici en DNF",
         "runner": "ALEX (#02)",
@@ -56,22 +66,22 @@
         "hr": "178 bpm",
         "date": "25/10/2026",
         "url": "https://www.strava.com/activities/20724911312"
-      },
-      {
-        "title": "Sortie de retour de vacances",
-        "runner": "ALEX (#02)",
-        "distance": "5,1 km",
-        "dplus": "16 m",
-        "pace": "6:54 /km",
-        "hr": "144 bpm",
-        "date": "21/10/2026",
-        "url": "https://www.strava.com/activities/20676508106"
       }
     ],
-    "totalKm": 65,
-    "totalDplus": 1216
+    "totalKm": 61,
+    "totalDplus": 1202
   },
   "recentRuns": [
+    {
+      "title": "On met le genou en tension tout doucement",
+      "runner": "ALEX (#02)",
+      "distance": "1,2 km",
+      "dplus": "2 m",
+      "pace": "6:47 /km",
+      "hr": "120 bpm",
+      "date": "16/11/2026",
+      "url": "https://www.strava.com/activities/21011750443"
+    },
     {
       "title": "Vini Vici en DNF",
       "runner": "ALEX (#02)",
@@ -121,16 +131,6 @@
       "hr": "178 bpm",
       "date": "25/10/2026",
       "url": "https://www.strava.com/activities/20724911312"
-    },
-    {
-      "title": "Sortie de retour de vacances",
-      "runner": "ALEX (#02)",
-      "distance": "5,1 km",
-      "dplus": "16 m",
-      "pace": "6:54 /km",
-      "hr": "144 bpm",
-      "date": "21/10/2026",
-      "url": "https://www.strava.com/activities/20676508106"
     }
   ]
 }
