@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T01:40:37.280Z",
+  "updatedAt": "2026-11-20T09:43:46.003Z",
   "gragams": {
     "runs": [],
     "totalKm": 0,
@@ -7,6 +7,16 @@
   },
   "alex": {
     "runs": [
+      {
+        "title": "On continue doucement",
+        "runner": "ALEX (#02)",
+        "distance": "3,5 km",
+        "dplus": "9 m",
+        "pace": "6:39 /km",
+        "hr": "147 bpm",
+        "date": "20/11/2026",
+        "url": "https://www.strava.com/activities/21056066720"
+      },
       {
         "title": "On met le genou en tension tout doucement",
         "runner": "ALEX (#02)",
@@ -56,22 +66,22 @@
         "hr": "158 bpm",
         "date": "28/10/2026",
         "url": "https://www.strava.com/activities/20769002914"
-      },
-      {
-        "title": "MK6",
-        "runner": "ALEX (#02)",
-        "distance": "20,3 km",
-        "dplus": "375 m",
-        "pace": "6:40 /km",
-        "hr": "178 bpm",
-        "date": "25/10/2026",
-        "url": "https://www.strava.com/activities/20724911312"
       }
     ],
-    "totalKm": 61,
-    "totalDplus": 1202
+    "totalKm": 44,
+    "totalDplus": 836
   },
   "recentRuns": [
+    {
+      "title": "On continue doucement",
+      "runner": "ALEX (#02)",
+      "distance": "3,5 km",
+      "dplus": "9 m",
+      "pace": "6:39 /km",
+      "hr": "147 bpm",
+      "date": "20/11/2026",
+      "url": "https://www.strava.com/activities/21056066720"
+    },
     {
       "title": "On met le genou en tension tout doucement",
       "runner": "ALEX (#02)",
@@ -121,16 +131,6 @@
       "hr": "158 bpm",
       "date": "28/10/2026",
       "url": "https://www.strava.com/activities/20769002914"
-    },
-    {
-      "title": "MK6",
-      "runner": "ALEX (#02)",
-      "distance": "20,3 km",
-      "dplus": "375 m",
-      "pace": "6:40 /km",
-      "hr": "178 bpm",
-      "date": "25/10/2026",
-      "url": "https://www.strava.com/activities/20724911312"
     }
   ]
 }
