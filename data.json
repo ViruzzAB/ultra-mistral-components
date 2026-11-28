@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T17:53:06.131Z",
+  "updatedAt": "2026-11-28T01:10:32.552Z",
   "gragams": {
     "runs": [],
     "totalKm": 0,
@@ -7,6 +7,16 @@
   },
   "alex": {
     "runs": [
+      {
+        "title": "Course à pied en soirée",
+        "runner": "ALEX (#02)",
+        "distance": "4,8 km",
+        "dplus": "23 m",
+        "pace": "6:16 /km",
+        "hr": "151 bpm",
+        "date": "27/11/2026",
+        "url": "https://www.strava.com/activities/21145878248"
+      },
       {
         "title": "Course à pied en soirée",
         "runner": "ALEX (#02)",
@@ -56,22 +66,22 @@
         "hr": "158 bpm",
         "date": "07/11/2026",
         "url": "https://www.strava.com/activities/20894922129"
-      },
-      {
-        "title": "Course à pied le matin",
-        "runner": "ALEX (#02)",
-        "distance": "11,1 km",
-        "dplus": "260 m",
-        "pace": "6:28 /km",
-        "hr": "158 bpm",
-        "date": "01/11/2026",
-        "url": "https://www.strava.com/activities/20813291463"
       }
     ],
-    "totalKm": 45,
-    "totalDplus": 827
+    "totalKm": 39,
+    "totalDplus": 590
   },
   "recentRuns": [
+    {
+      "title": "Course à pied en soirée",
+      "runner": "ALEX (#02)",
+      "distance": "4,8 km",
+      "dplus": "23 m",
+      "pace": "6:16 /km",
+      "hr": "151 bpm",
+      "date": "27/11/2026",
+      "url": "https://www.strava.com/activities/21145878248"
+    },
     {
       "title": "Course à pied en soirée",
       "runner": "ALEX (#02)",
@@ -121,16 +131,6 @@
       "hr": "158 bpm",
       "date": "07/11/2026",
       "url": "https://www.strava.com/activities/20894922129"
-    },
-    {
-      "title": "Course à pied le matin",
-      "runner": "ALEX (#02)",
-      "distance": "11,1 km",
-      "dplus": "260 m",
-      "pace": "6:28 /km",
-      "hr": "158 bpm",
-      "date": "01/11/2026",
-      "url": "https://www.strava.com/activities/20813291463"
     }
   ]
 }
